@@ -1,6 +1,6 @@
-# subagent-forge
+# agents-forge
 
-Installs the **subagent-forge** agent skill into any project: `SKILL.md`,
+Installs the **agents-forge** agent skill into any project: `SKILL.md`,
 the `references/` docs, `scripts/` helpers, and any bundled `assets/`.
 
 Designs, scaffolds, and validates working project-scoped subagents (pi `.pi/agents` and Claude Code `.claude/agents`) for the current repository. It analyzes the project, picks a lean agent roster, writes valid agent Markdown, and lints it before you rely on it.
@@ -45,7 +45,7 @@ so it installs with a single command via [`npx skills`](https://github.com/verce
 — no cloning, no config:
 
 ```bash
-npx skills add https://github.com/One4Shell/subagent-forge-skill --skill subagent-forge
+npx skills add https://github.com/One4Shell/agents-forge-skill --skill agents-forge
 ```
 
 `npx skills` auto-detects which coding agents you have installed and copies
@@ -60,20 +60,20 @@ If you'd rather not depend on the `skills` CLI, use the plain shell
 installer bundled in this repo instead:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/One4Shell/subagent-forge-skill/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/One4Shell/agents-forge-skill/main/install.sh | bash
 ```
 
 To pass options through the pipe, use `bash -s --`:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/One4Shell/subagent-forge-skill/main/install.sh | bash -s -- --claude
+curl -fsSL https://raw.githubusercontent.com/One4Shell/agents-forge-skill/main/install.sh | bash -s -- --claude
 ```
 
 Or clone and run it locally (no network access needed at install time):
 
 ```bash
-git clone https://github.com/One4Shell/subagent-forge-skill.git
-cd subagent-forge
+git clone https://github.com/One4Shell/agents-forge-skill.git
+cd agents-forge
 ./install.sh --dir /path/to/your/project
 ```
 
@@ -82,8 +82,8 @@ cd subagent-forge
 ```
 --dir <path>     Project root to install into (default: current directory)
 --path <path>    Custom install path, relative to --dir
-                  (default: .agents/skills/subagent-forge)
---claude         Shorthand for --path .claude/skills/subagent-forge
+                  (default: .agents/skills/agents-forge)
+--claude         Shorthand for --path .claude/skills/agents-forge
 --force          Overwrite existing files (default: skip files that already exist)
 -h, --help       Show help
 ```
@@ -101,7 +101,7 @@ it's safe to re-run.
 ## What gets installed
 
 ```
-skills/subagent-forge/            # repo layout — also discoverable as .agents/skills/subagent-forge
+skills/agents-forge/            # repo layout — also discoverable as .agents/skills/agents-forge
 ├── SKILL.md                      # entry point the agent reads
 ├── scripts/                      # executable helpers, if any
 ├── references/                   # docs loaded into context as needed
