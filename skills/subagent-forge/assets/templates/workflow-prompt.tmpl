@@ -1,0 +1,17 @@
+---
+description: scout -> planner -> worker implementation workflow
+---
+
+Use a chain of subagents to implement: <request>
+
+1. Run the `scout` agent to find everything relevant to <request>. Ask for
+   compressed findings with file paths and line ranges.
+2. Pass those findings to the `planner` agent and ask for a concrete,
+   ordered plan.
+3. Pass the plan to a `worker` agent and have it implement the plan exactly.
+
+Report the final result and a short summary of what changed. If any step
+fails, stop and report which step failed and why.
+
+When invoking project-local agents from a trusted project, pass
+`confirmProjectAgents: false` to skip the repeat confirmation prompt.
