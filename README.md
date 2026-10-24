@@ -45,7 +45,7 @@ so it installs with a single command via [`npx skills`](https://github.com/verce
 — no cloning, no config:
 
 ```bash
-npx skills add https://github.com/One4Shell/agents-forge-skill --skill agents-forge
+npx skills add https://github.com/One4Shell/agents-forge-skill
 ```
 
 `npx skills` auto-detects which coding agents you have installed and copies
